@@ -1,0 +1,20 @@
+{ 
+	"1" : {
+	"title" : "Monday-blog",
+	"content": "Task 1 and swimming",
+	"tags" : ["work","sports"],
+	"comments" : ["my first blog"],
+	"created" : "2019-12-05 01:55:07.392569",
+	"updated" : "2019-12-05 01:55:07.392569"
+	},
+
+	"2" : {
+	"title" : "Tuesday-blog",
+	"content": "Task 2 and dead squad",
+	"tags" : ["work","gym"],
+	"comments" : ["my second blog"],
+	"created" : "2019-12-06 01:55:07.392569",
+	"updated" : "2019-12-06 01:55:07.392569"
+	}
+
+}
