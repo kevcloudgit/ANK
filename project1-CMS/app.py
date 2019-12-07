@@ -1,13 +1,14 @@
 import json
 import flask
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello customer!'
+    # return render_template('home.html')
+    return 'Hello customer!'   #Aurther original code
 
 
 def read_datastore(data_file):
@@ -30,6 +31,10 @@ def get_id_by_title(title):
              print(v)
              if v == title:
                  return id
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 
 @app.route('/rest/blog/id/<id>', methods=['GET'])
