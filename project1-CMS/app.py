@@ -1,14 +1,13 @@
 import json
 import flask
-from flask import Flask, request, render_template
+from flask import Flask, request, jsonify
 
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    # return render_template('home.html')
-    return 'Hello customer!'   #Aurther original code
+    return 'Hello customer!'
 
 
 def read_datastore(data_file):
@@ -32,10 +31,6 @@ def get_id_by_title(title):
              if v == title:
                  return id
 
-@app.route('/home')
-def home():
-    return render_template('home.html')
-
 
 @app.route('/rest/blog/id/<id>', methods=['GET'])
 def get_content(id: int):
@@ -45,7 +40,8 @@ def get_content(id: int):
                                  id=id,
                                  title=blog['title'], 
                                  content=blog['content'],
-                                 comments=blog['comments'])
+                                 comments=blog['comments'],
+                                 created=blog['created'])
 
 
 @app.route('/rest/blog/title/<title>', methods=['GET'])
@@ -55,15 +51,16 @@ def get_content_by_title(title):
     print(title_id)
     title_blog = read_datastore('datastore.json')[title_id]
     return flask.render_template('blog.html', 
-                                             id=title_id,
-                                             title=title_blog['title'], 
-                                             content=title_blog['content'],
-                                             comments=title_blog['comments'])
+                                 id=title_id,
+                                 title=title_blog['title'], 
+                                 content=title_blog['content'],
+                                 comments=title_blog['comments'],
+                                 created=title_blog['created'])
 
 
 @app.route('/rest/blogs/', methods=['GET'])
 def get_contents():
-    blogs = read_datastore()
+    blogs = read_datastore('datastore.json')
     return jsonify(blogs)
 
 

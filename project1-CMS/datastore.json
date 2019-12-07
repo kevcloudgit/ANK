@@ -4,8 +4,8 @@
 	"content": "Task 1 and swimming",
 	"tags" : ["work","sports"],
 	"comments" : ["my first blog"],
-	"created" : "2019-12-05 01:55:07.392569",
-	"updated" : "2019-12-05 01:55:07.392569"
+	"created" : "2019-12-02 01:55:07.392569",
+	"updated" : "2019-12-02 01:55:07.392569"
 	},
 
 	"2" : {
@@ -13,8 +13,17 @@
 	"content": "Task 2 and dead squad",
 	"tags" : ["work","gym"],
 	"comments" : ["my second blog"],
-	"created" : "2019-12-06 01:55:07.392569",
-	"updated" : "2019-12-06 01:55:07.392569"
+	"created" : "2019-12-03 01:55:07.392569",
+	"updated" : "2019-12-03 01:55:07.392569"
+	},
+
+	"3" : {
+	"title" : "Wednesday-blog",
+	"content": "Task 3 and bench pushups",
+	"tags" : ["work","gym"],
+	"comments" : ["my third blog"],
+	"created" : "2019-12-04 01:55:07.392569",
+	"updated" : "2019-12-04 01:55:07.392569"
 	}
 
 }
